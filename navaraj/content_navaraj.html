@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+	<title>JavaScript Conditional Statements (if, else, else if, switch)</title>
+	<meta charset ="utf-8">
+	<meta name="description" content="This page is about how web page layout is formed" >
+    <meta name="keywords" content="gradiant,blue,green" >
+    <meta name="author" content="Nava Raj Joshi">
+	
+    </head>	
+	
+	<body>
+    <div id ="content1">    
+		<h1>JavaScript Conditional Statements</h1>
+		<p>In programming language conditional statements preform different action based upon conditions. Following are Conditional Statement in JavaScript language</p>
+			<ul>
+				<li>if statement</li>
+				<li>if else statement</li>
+				<li>else statement</li>
+				<li>Switch statement</li>
+			</ul>
+    </div>    
+    <hr>
+	
+    <div id="content2">    
+        <h2>if, if else, and else statement</h2>
+		These statements give decision according to true or false of condition.” if” and “if else” statements run only the logical condition is true otherwise else condition run.
+		<h3>Syntax</h3>
+		<ol style="list-style-type: none;">
+				<li>if (condition) &#123;</li>
+				<li>Run this code ;</li>
+				<li>&#125;</li>
+				<li>else if &#123; if the first statement is false then run this code</li>
+				<li>&#125;</li>
+				<li>else &#123; if all above statement are false then run this code</li>
+				<li>&#125;</li>
+				
+		</ol>
+    
+		<h3>For example:</h3>
+        <ol style="list-style-type: none;"><b>Marriage</b>
+            <pre class="brush:js;toolbar:false;">
+
+				<li>&lt;script&gt;</li>
+				<li>var age = 55;</li>
+				<li>if(age &lt;22)&#123;</li>
+				<li>document.write("You are young to marry.");</li>
+				<li>&#125;</li>
+				<li>else if( age &lt;65) &#123;</li>
+				<li>document.write("You can marry if you want.");</li>
+				<li>&#125;</li>
+				<li>else &#123; document.write("Seriously Think before marry.");</li>
+				<li>&#125;</li>
+				<li>&lt;&frasl;script&gt;</li>
+            </pre>    
+		</ol>
+            <b>Output:</b>
+                <script>
+                var age = 55;
+                if(age <22){
+                document.write("You are young to marry.");
+                }
+                else if( age <65) {
+                document.write("You can marry if you want.");
+                }
+                else { document.write("Seriously Think before marry.");
+                }
+                </script>
+		       <br>
+        
+        	<ol style="list-style-type: none;"><b>Alcohol</b>
+                <pre class="brush:js;toolbar:false;">
+				<li>&lt;script&gt;</li>
+				<li>var age = 16;</li>
+				<li>if(age &lt;19)&#123;</li>
+				<li>document.write("You cannot drink alcohol or buy cigarettes.");</li>
+				<li>&#125;</li>
+				<li>else &#123; document.write("Seriously Think before marry.");</li>
+				<li>&#125;</li>
+				<li>&lt;&frasl;script&gt;</li>
+                </pre>
+		</ol>
+        
+            <b>Output:</b>
+              <script>
+                var age = 16;
+                if(age <19){
+                document.write("You cannot drink alcohol or buy cigarettes.");
+                }
+                else { document.write("Seriously Think before marry.");
+                }
+              </script>
+		       <br>
+        </div>
+        <hr>
+        
+        <div id="content3">
+		<h2>Switch statement</h2>
+		<P>This is like as if statement, but it can check multiple value at a same time</P>
+		<h3>Syntax</h3>
+		<ol style="list-style-type: none;">
+				<li>Switch (expression) &#123;</li>
+				<li>case 1 :Run this code ;</li>
+				<li>break;</li>
+				<li>case 2 :Run this code ;</li>
+				<li>break;</li>
+				<li>case 3 :Run this code ;</li>
+				<li>break;</li>
+				<li>default:  Run this code;</li>
+				<li>Break;</li>
+				<li>&#125;</li>
+		</ol>
+		<h3>For example:</h3>
+        <ol style="list-style-type: none;"><b>Month</b>
+            <pre class="brush:js;toolbar:false;">
+
+				<li>&lt;script&gt;</li>
+				<li>var month = "january";</li>
+				<li>switch (month) &#123;</li>
+				<li>case "january" :</li>
+				<li>document.write (" Spring session is started in George Brown College.");</li>
+				<li>break;</li>
+				<li>case "august" :</li>
+				<li>document.write (" Fall session is started in George Brown College.");</li>
+				<li>break;</li>
+				<li>case "june" :</li>
+				<li>document.write ("Summer session is started in George Brown College.");</li>
+				<li>break;</li>
+				<li>default :</li>
+				<li>document.write ("Ready for joining any session in George Brown College. choose suitable session for you.");</li>
+				<li>&#125;</li>
+				<li>&lt;&frasl;script &gt;</li>
+            </pre>    
+		</ol>
+        
+            <b>Output:</b>
+            <script>
+				
+                var month = "january";			
+                switch (month) {				
+                
+                case "january" :
+                document.write (" Spring session is started in George Brown College."); break;
+                
+                case "august" :
+                document.write (" Fall session is started in George Brown College.");break;
+                
+                case "june" :
+                document.write ("Summer session is started in George Brown College.");break;
+                
+                default : document.write ("Ready for joining any session in George Brown College. choose suitable session for you.");
+                }
+
+        </script>
+        <br>
+        <br>
+        </div>    
+        <hr>
+	
+			<script type='text/javascript'> //<!--[CDATA[
+	document.write ("<a href='http://validator.w3.org/check?uri=" +
+	location.href+ "\;ss=1;verbose=1' target='display'>" +
+	"<img src='http://gblearn.com/comp1223/wp-content/uploads/2013/09/HTML5_Logo_256.png' " +
+	"width='50' height='50' border='0' " +
+	"alt='Valid HTML5.' " +
+	"title='Valid HTML5' /></a>")
+	dt=new Date(document.lastModified);
+	document.write("<small>This page was last modified on " +
+	dt.toLocaleString() + "</small>")
+//]]--></script>	
+	</body>
+	
+				
+</html>

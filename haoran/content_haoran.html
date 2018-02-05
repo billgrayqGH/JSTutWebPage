@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+ 
+            <meta charset ='utf-8'>
+            <meta name='description' content = 'Content page by Haoran Li'>
+            <meta name='keywords' content = 'assign2,js_syntax,loop_statements'>
+            <meta name='author' content = 'Haoran Li'>
+
+            <title>Java Script Loop Statements</title>
+
+    </head>
+
+    <body>
+
+        <div id="content1">
+            <h1>Java Script Loop Statements</h1>
+            
+        <h2>What are Loop Statements?</h2>
+            <p>
+            Loop Statements are used in programming language to do repetitive task using lesser codes and output infinite values.
+            There are three kinds of loop statements can be used to repeat commands on a programming language, namely: do-while, while and for-loop statements.  
+        </div>    
+      <hr>
+  
+        <div id="content2">
+            <h2>do-while statement</h2>
+            <p>
+              Do-while statements executes the statement inside the braces once before checking if the condition is true. When the condition is satisfied the loop will continue.
+            </p>
+            
+            	<h3>Syntax</h3>
+		      <ol style="list-style-type: none;">
+				<li>do&#123;</li>
+                <li>&nbsp;</li>  
+				<li>&lt;statement&gt;</li>
+                <li>&nbsp;</li>  
+				<li>&#125;while&lpar;condition&rpar;</li>
+		      </ol>
+            
+            <h3>Example</h3>
+            
+            <pre class="brush:js;toolbar:false;">
+            &lt;p&gt;Click the button to loop through a block of code as long as i is less than 5.&lt;/p&gt;
+            &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;
+            &lt;p id="demo"&gt;&lt;/p&gt;
+
+            &lt;script&gt;
+            function myFunction()
+            {
+            var x="",i=0;
+            do
+              {
+              x=x + "The number is " + i + "&lt;br&gt;";
+              i++;
+              }
+            while (i&lt;5)  
+            document.getElementById("demo").innerHTML=x;
+            }
+            &lt;/script&gt;
+            </pre>
+            
+            <p>Click the button to loop through a block of code as long as i is less than 5.</p>
+            <button onclick="myFunction()">Try it</button>
+            <p id="demo"></p>
+
+            <script>
+            function myFunction()
+            {
+            var x="",i=0;
+            do
+              {
+              x=x + "The number is " + i + "<br>";
+              i++;
+              }
+            while (i<5)  
+            document.getElementById("demo").innerHTML=x;
+            }
+            </script>
+              
+        </div> 
+        <hr>
+        
+         <div id="content3">
+            <h2>while statement</h2>
+            <p>
+              While statements checks the condition first if it is true before executing the statement inside the braces. If the condition is satisfied then the loop continues.
+            </p>
+            
+            	<h3>Syntax</h3>
+		      <ol style="list-style-type: none;">
+				<li>while&lpar;condition&rpar;&#123;</li>
+                <li>&nbsp;</li>  
+				<li>&lt;statement&gt;</li>
+                <li>&nbsp;</li>  
+				<li>&#125;</li>
+		      </ol>
+            
+            <h3>Example</h3>
+            
+            <pre class="brush:js;toolbar:false;">
+            &lt;p&gt;Click the button to loop througn a block of code as long as i is less than 10.&lt;/p&gt;
+
+            &lt;button onClick="calculate()"&gt;Try it &lt;/button&gt;
+
+            &lt;p id="demo"&gt;&lt;/p&gt;
+                &lt;script&gt;
+            function calculate(){
+                var text = "";
+                var i = 0;
+                while (i &lt; 10) {
+                            text += "&lt;br&gt;The number is " + i;	
+                            i++;
+                }
+                document.getElementById("demo").innerHTML = text;
+                }
+
+            &lt;/script&gt;
+            </pre>
+            
+        <p>Click the button to loop througn a block of code as long as i is less than 10.</p>
+
+        <button onClick="calculate()">Try it </button>
+
+        <p id="demo2"></p>
+        <script>
+        function calculate(){
+            var text = "";
+            var i = 0;
+            while (i < 10) {
+                        text += "<br>The number is " + i;	
+                        i++;
+            }
+            document.getElementById("demo2").innerHTML = text;
+            }
+
+        </script>      
+        </div> 
+        <hr>
+        
+         <div id="content4">
+            <h2>for-loop statement</h2>
+            <p>
+              For-loop statements checks the condition first if it is true before executing the statement inside the braces but there should be initial value for the counter and sometimes ending value for the counter. If the condition is satisfied then the loop continues.
+            </p>
+            
+            	<h3>Syntax</h3>
+		      <ol style="list-style-type: none;">
+				<li>for&lpar;condition&rpar;&#123;</li>
+                <li>&nbsp;</li>  
+				<li>&lt;statement&gt;</li>
+                <li>&nbsp;</li>  
+				<li>&#125;</li>
+		      </ol>
+            
+            <h3>Example</h3>
+            
+            <pre class="brush:js;toolbar:false;">
+            &lt;p id="demo"&gt;&lt;/p&gt;
+    
+            &lt;script&gt;
+            cars = ["BMW", "Volvo", "Saab", "Ford"];
+            text = "";
+            var i;
+            for (i = 0; i &lt; cars.length; i ++) {
+                    text += cars[i] + "&lt;br&gt;";	
+            }
+
+            document.getElementById("demo").innerHTML = text;
+            &lt;/script&gt;
+            </pre>
+            
+            <p id="demo3"></p>
+
+            <script>
+            cars = ["BMW", "Volvo", "Saab", "Ford"];
+            text = "";
+            var i;
+            for (i = 0; i < cars.length; i ++) {
+                    text += cars[i] + "<br>";	
+            }
+
+            document.getElementById("demo3").innerHTML = text;
+            </script>
+     
+        </div> 
+        <hr>
+          
+    <br>    
+    <script type='text/javascript'> //<!--[CDATA[
+	document.write ("<a href='http://validator.w3.org/check?uri=" +
+	location.href+ "\;ss=1;verbose=1' target='display'>" +
+	"<img src='http://gblearn.com/comp1223/wp-content/uploads/2013/09/HTML5_Logo_256.png' " +
+	"width='50' height='50' border='0' " +
+	"alt='Valid HTML5.' " +
+	"title='Valid HTML5' /></a>")
+	dt=new Date(document.lastModified);
+	document.write("<small>This page was last modified on " +
+	dt.toLocaleString() + "</small>")
+//]]--></script>	
+    
+    </body>
+
+</html>

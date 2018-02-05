@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="This page is regarding an tutorial about JavaScript">
+		<meta name="keywords" content="Introduction to JavaScript,Client Side Scripting, JavaScript">
+		<meta name="author" content="Osvaldo Samianza">
+		<script type="text/javascript">
+			function click_here()
+			{
+				alert("Your time is over!!!");
+			}
+		</script>
+		<title>Client Side Scripting</title>
+	</head>
+	<body>
+                <h1>Introduction to Client Side Scripting JavaScript</h1>
+                    <p>Client side scripting refers to a class of computer programs that are executed on client side by the user's web browser engine. This type 
+                        of computer programming is an important part of the Dynamic HTML, enabling web pages to have different and changing content depending
+                        on user input, environmental conditions or other variables.
+                    </p>
+
+        <div id = "content1">        
+                <h2>JavaScript</h2>
+                    <p>When developing a wed page, we use HTML to formatting all document using tags which are identified and interpreted by a web browser. With CSS,
+                        we can give not only a better look to our web page but also make easy to do the maintenance but, in order to have a dynamic web page a third 
+                        ingredient is needed, JavaScript. JavaScrip is a scripting language that runs on JavaScript engine of a browser and it is the most implemented 
+                        and supported scripting language for the most web browsers. The implementation of JavaScript allow client side scripts to
+                        interact with the user, control the browser, communicate asynchronously, and alter the document content that is displayed.
+                    </p>
+        <hr>		
+                <h2>How to code JavaScript</h2>
+                    <p>The are two ways to use JavaScript at client side. One way is by embedded the script within the HTML code using the tag element <b>&lt;script&gt;&lt;/script&gt;</b>.
+                        Embedded script can run in between the head or the body tags.
+                    </p> 
+                    <pre class="brush:js;toolbar:false;">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;script type="text/javascript"&gt;
+                                    alert("Your time is over!!!")
+                                &lt;/script&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </pre>			
+                    <p>Another way is to code it in an external file with the extension .js and then make reference on the HTML document (or documents) that is
+                    going to use the external script.
+                    </p>
+                    <pre class="brush:js;toolbar:false;">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;script type="text/javascript" src="scriptfile.js"&gt;&lt;/script&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </pre>
+        </div>    
+        <hr>    
+        <div id ="content2">        
+                <h2>Using JavaScript</h2>
+                    <p>To manipulate and change an HTML document, JavaScript manipulates the Document Object Model (DOM).</p>
+                    <ul>
+                        <li><b>Changing HTML content</b>
+                    <pre class="brush:js;toolbar:false;">    
+                    &lt;p id="example1"&gt;JavaScript can change the content of an HTML element.&lt;/p&gt;
+                    &lt;button type="button" onclick="contentChange()"&gt;Click here&lt;/button&gt;
+                    &lt;script&gt;
+                    function contentChange() { 
+                    document.getElementById("example1").innerHTML = "This is my first example.";}
+                    &lt;/script&gt;   
+                    </pre>
+                            
+                            <p id="example1">JavaScript can change the content of an HTML element.</p>
+                            <button type="button" onclick="contentChange()">Click here</button>
+                            <script>
+                                function contentChange() { document.getElementById("example1").innerHTML = "This is my first example.";}
+                            </script>
+                        <br>
+                        <br>
+                        <li><b>Validating data</b>
+                        <pre class="brush:js;toolbar:false;">
+                        &lt;input id="numb" type="number"&gt;
+                        &lt;button type="button" onclick="ageValidator()"&gt;Submit&lt;/button&gt;
+                        &lt;p id="example2"&gt;&lt;/p&gt;
+                        &lt;script&gt;
+                        function ageValidator() {
+                        var x, text;
+                        x = document.getElementById("numb").value;
+                        if (isNaN(x) || x &gt; 17) {
+                        text = "You can proceed";} 
+                        else { text = "Cannot be selected";}
+                        document.getElementById("example2").innerHTML = text;
+                        }
+                        &lt;/script&gt;
+                            
+                        </pre>
+                            
+                            <p>Your age (Only 18+)</p>
+                            <input id="numb" type="number">
+                            <button type="button" onclick="ageValidator()">Submit</button>
+                            <p id="example2"></p>
+                            <script>
+                                function ageValidator() {
+                                    var x, text;
+                                    x = document.getElementById("numb").value;
+                                    if (isNaN(x) || x > 17) {
+                                    text = "You can proceed";} 
+                                else { text = "Cannot be selected";}
+                                    document.getElementById("example2").innerHTML = text;
+                                }
+                            </script>
+                            
+                        </li><br>
+                        <li><b>Popup message<b>
+                            <pre class="brush:js;toolbar:false;">
+                            &lt;script type="text/javascript"&gt;
+                            function click_here()
+                            {
+                                alert("Your time is over!!!");
+                            }
+                            &lt;/script&gt;
+                            </pre>
+                            <p><button onclick="click_here();">Click</button><p>
+                        </li>	
+                    </ul>
+        </div>
+        <hr>
+        <br>    
+            
+    			<script type='text/javascript'> //<!--[CDATA[
+                document.write ("<a href='http://validator.w3.org/check?uri=" +
+                location.href+ "\;ss=1;verbose=1' target='display'>" +
+                "<img src='http://gblearn.com/comp1223/wp-content/uploads/2013/09/HTML5_Logo_256.png' " +
+                "width='50' height='50' border='0' " +
+                "alt='Valid HTML5.' " +
+                "title='Valid HTML5' /></a>")
+                dt=new Date(document.lastModified);
+                document.write("<small>This page was last modified on " +
+                dt.toLocaleString() + "</small>")
+            //]]--></script>        
+	</body>
+</html>
